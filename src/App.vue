@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, reactive } from "vue";
 import LifeCycleHookComponent from "./components/LifeCycleHookComponent.vue";
+import ParentComponent from "./components/ParentComponent.vue";
 
 const count = ref({
   amount: 100,
@@ -52,6 +53,10 @@ function reactiveStateHandler() {
         <LifeCycleHookComponent />
       </div>
       <div v-else><h2>LifeCycleHookComponent is unmounted</h2></div>
+    </div>
+
+    <div class="border border-x-red-300 p-8 m-8 bg-blue-200">
+      <ParentComponent />
     </div>
   </div>
 </template>
